@@ -27,8 +27,8 @@ closeButton.addEventListener('click', drawer.close);
 <a name="api"></a>
 ## API
 
-  <a name="api_constructor">#</a>
-  var Drawer = <b>require('drawer')</b><br/>
+  <a name="api_constructor">#</a><br/>
+  var Drawer = require('drawer')<br/>
   var drawer = <b>Drawer()</b>
 
   Construct a new drawer _render function_.
