@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Drawer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../build/build.css" />
+    
+    <style>
+      button {
+        display: inline-block;
+        margin: 0 3px 3px 0;
+      }
+      .page {
+        padding-left: 0px;
+        transition: padding-left 0.5s;
+      }
+
+      .sidebar {
+        width: 20%;
+        left: -20%;
+        min-height: 1000px;
+        background-color: lightgrey;
+        border: 1px solid darkgrey;
+        transition: left 0.5s;
+      }
+      .main {
+        width: 80%;
+        min-height: 1000px;
+        background-color: lightblue;
+        border: 1px solid darkgrey;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Drawer example</h1>
+    <button class="toggle">Toggle</button>
+    <button class="open">Open</button>
+    <button class="close">Close</button>
+    <section class="page">
+      <section class="sidebar"></section>
+      <section class="main"></section>
+    </section>
+
+    <script src="../build/build.js"></script>
+    <script>
+      var Drawer = require('drawer')
+        , drawer = Drawer()
+        , togbtn = document.querySelector('.toggle')
+        , openbtn = document.querySelector('.open')
+        , closebtn = document.querySelector('.close')
+        , sidebar = document.querySelector('.sidebar')
+
+      drawer.on('toggle', function(s){ console.log('toggle state: %s', s); });
+      drawer.on('open', function(){ console.log('open');  });
+      drawer.on('close', function(){ console.log('close');  });
+
+      drawer.close();   // init state
+      drawer(sidebar);  // first render
+
+      togbtn.addEventListener('click', drawer.toggle);
+      openbtn.addEventListener('click', drawer.open);
+      closebtn.addEventListener('click', drawer.close);
+
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,23 @@
+{
+  "name": "drawer",
+  "repo": "ericgj/drawer",
+  "description": "Drawer UI component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "ericgj/d3-dispatch": "master",
+    "ericgj/d3-rebind":   "master"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "templates": [
+    "template.html"
+  ],
+  "styles": [
+    "drawer.css"
+  ]
+}
