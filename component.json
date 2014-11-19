@@ -2,7 +2,7 @@
   "name": "drawer",
   "repo": "ericgj/drawer",
   "description": "Drawer UI component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "dependencies": {
     "ericgj/d3-dispatch": "master",
@@ -13,9 +13,6 @@
   "main": "index.js",
   "scripts": [
     "index.js"
-  ],
-  "templates": [
-    "template.html"
   ],
   "styles": [
     "drawer.css"
